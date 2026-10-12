@@ -128,7 +128,7 @@ END;
 $$;
 
 CREATE TRIGGER rental_status_audit
-AFTER INSERT OR UPDATE OF status ON public.rentals
+AFTER INSERT OR UPDATE ON public.rentals
 FOR EACH ROW
 EXECUTE FUNCTION public.log_rental_status_change();
 
