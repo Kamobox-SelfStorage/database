@@ -1,4 +1,4 @@
-\# Database
+# Database
 
 
 
@@ -6,17 +6,17 @@ Database engine: PostgreSQL 18
 
 
 
-\## Structure
+## Structure
 
 
 
-\- migrations/ — SQL-файлы со структурой и изменениями базы.
+- migrations/ — SQL-файлы со структурой и изменениями базы.
 
-\- seeds/ — тестовые данные для локальной разработки.
+- seeds/ — тестовые данные для локальной разработки.
 
 
 
-\## Local database
+## Local database
 
 
 
@@ -24,13 +24,13 @@ Database name: self\_storage
 
 
 
-\## Rules
+## Rules
 
 
 
-\- Never commit passwords, API keys, or real customer data.
+- Never commit passwords, API keys, or real customer data.
 
-\- Schema changes must be saved in version-controlled migrations.
+- Schema changes must be saved in version-controlled migrations.
 
-\- Test migrations against a clean database before deployment.
+- Test migrations against a clean database before deployment.
 
