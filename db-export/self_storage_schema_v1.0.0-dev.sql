@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict AmdDuzasXPcIBsCvni1by2OS1RYx1XhujzcSHUhJlbBkkgm4eIs2p2ZO6BB2xQ2
+\restrict Qvx7Ra3P8l6JOwNpPVNNG5RpBD1IB1plN6V6KwrT3dyVwfXRltyY37n3I5JVaK8
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -221,7 +221,9 @@ CREATE TABLE public.units (
     area_m2 numeric(5,2) NOT NULL,
     status character varying(20) DEFAULT 'AVAILABLE'::character varying NOT NULL,
     container_id integer NOT NULL,
+    monthly_price numeric(10,2) NOT NULL,
     CONSTRAINT units_area_m2_check CHECK ((area_m2 > (0)::numeric)),
+    CONSTRAINT units_monthly_price_positive CHECK ((monthly_price > (0)::numeric)),
     CONSTRAINT units_status_check CHECK (((status)::text = ANY ((ARRAY['AVAILABLE'::character varying, 'MAINTENANCE'::character varying, 'UNAVAILABLE'::character varying])::text[])))
 );
 
@@ -426,4 +428,5 @@ ALTER TABLE ONLY public.units
 -- PostgreSQL database dump complete
 --
 
-\unrestrict AmdDuzasXPcIBsCvni1by2OS1RYx1XhujzcSHUhJlbBkkgm4eIs2p2ZO6BB2xQ2
+\unrestrict Qvx7Ra3P8l6JOwNpPVNNG5RpBD1IB1plN6V6KwrT3dyVwfXRltyY37n3I5JVaK8
+
